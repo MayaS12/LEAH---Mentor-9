@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEAH - Artist Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href='https://fonts.googleapis.com/css?family=RocknRoll One' rel='stylesheet'>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <main>
+      <section class="glass">
+        <div class="dashboard">
+          <div class="user">
+            <h3 id="profile-full-name"></h3>
+            <p>Artist</p>
+          </div>
+          <div class="links">
+            <div class="link">
+             <img src="img/profile.png" style="width: 50px;">
+              <h2>Profile</h2>
+            </div>
+            <div class="link">
+             <img src="img/pendingRequest.png" style="width: 50px;">
+              <h2>Pending Requests</h2>
+            </div>
+            <div class="link">
+            <img src="img/events.png" style="width: 50px;">
+              <h2>Events</h2>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+            <div class="status">
+                <h1> Profile </h1>
+                <h2 id="profile-name"></h2>
+                <h2 id="profile-email"></h2>
+                <h2 id="profile-phone"></h2>
+                <h2 id="profile-state"></h2>
+                <h2 id="profile-artist-type"></h2>
+                <h2 id="profile-genre"></h2>
+                <h2 id="profile-instrument"></h2>
+                <h2 id="profile-links"></h2>
+                <h2 id="profile-fee"></h2>
+        </div>
+      </section>
+    </main>
+      <!--Firebase connection CDN -->
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+<script>
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDxN6hU7kmAJC7VqyCzWYdQWKqY2jh5MDQ",
+  authDomain: "leah---silicon-valley-a1a85.firebaseapp.com",
+  databaseURL: "https://leah---silicon-valley-a1a85-default-rtdb.firebaseio.com",
+  projectId: "leah---silicon-valley-a1a85",
+  storageBucket: "leah---silicon-valley-a1a85.appspot.com",
+  messagingSenderId: "164361881696",
+  appId: "1:164361881696:web:cfa01f7d63e464179a9b05"
+  };
+  firebase.initializeApp(config);
+  
+  // make auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  // update firestore settings
+  db.settings({ timestampsInSnapshots: true });
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="/scripts/auth.js"></script>
+
+  </body>
+</html>
